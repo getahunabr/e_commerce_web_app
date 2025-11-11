@@ -28,8 +28,9 @@ const RegisterPage = () => {
         body: JSON.stringify(formData),
       });
       router.push("/login");
-    } catch (err) {
-      setError(err.message || "An unexpected error occurred");
+    } catch (error) {
+      // @ts-ignore
+      setError(error.message);
     }
   };
   return (
