@@ -20,7 +20,7 @@ const RegisterPage = () => {
     e.preventDefault();
 
     try {
-      const res = await fetchAPI("/api/users/register", {
+      const res = await fetchAPI("api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

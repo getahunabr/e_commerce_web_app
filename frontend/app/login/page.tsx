@@ -42,7 +42,7 @@ const LoginPage = () => {
 
     try {
       // fetchAPI already handles response parsing and errors
-      const data = await fetchAPI("/api/users/login", {
+      const data = await fetchAPI("api/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
