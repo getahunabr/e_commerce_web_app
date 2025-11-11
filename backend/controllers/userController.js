@@ -41,6 +41,7 @@ export const createUser = async (req, res) => {
     });
   } catch (error) {
     console.error("Error creating user:", error);
+    console.error(error.stack);
     res.status(500).json({ message: error.message });
   }
 };
