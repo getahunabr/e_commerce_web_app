@@ -6,14 +6,16 @@ dotenv.config();
 const startServer = async () => {
   try {
     await connectDB();
-    await sequelize.sync(); // Sync models with the database
-    const PORT = process.env.PORT || 8000;
 
+    await sequelize.sync({ alter: true });
+    console.log("✅ Database synced successfully.");
+
+    const PORT = process.env.PORT || 8000;
     app.listen(PORT, () => {
-      console.log(`Server is running on port ${PORT}`);
+      console.log(`🚀 Server is running on port ${PORT}`);
     });
   } catch (error) {
-    console.error("Failed to start server:", error);
+    console.error("❌ Failed to start server:", error);
   }
 };
 
