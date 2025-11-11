@@ -6,7 +6,7 @@ dotenv.config();
 
 // Controller to create a new user
 export const createUser = async (req, res) => {
-  console.log("Request body:", req.body);
+  console.log("👉 Incoming body:", req.body);
 
   const { name, email, password, isAdmin = false } = req.body;
   try {
