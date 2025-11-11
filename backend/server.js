@@ -8,7 +8,7 @@ const startServer = async () => {
     await connectDB();
 
     // 🔧 Reset tables completely (run once)
-    await sequelize.sync({ force: true });
+    await sequelize.sync();
     console.log("✅ Database reset and synced successfully.");
 
     const PORT = process.env.PORT || 8000;
